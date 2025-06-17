@@ -1,0 +1,193 @@
+Script started on Sun 15 Jun 2025 08:47:26 PM CST
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ ./a.out < data_type_mismatch_case.txt [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pcat -n[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clear[Kat -n data_type_mismatch_case.txt [4Pvim data_type_mismatch_case.txtls[Kcd final_project/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kyacc -d microex.y
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ lex microex.l
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ gcc lex.yy.c y.tab.c -ly -lfl
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ ls -l
+total 212
+-rwxr-xr-x 1 M11212913 telnet 36560 2025-06-15 20:47 [0m[01;32ma.out[0m
+-rw-r--r-- 1 M11212913 telnet   158 2025-06-15 17:23 data_type_mismatch_case.txt
+-rw-r--r-- 1 M11212913 telnet   195 2025-06-15 16:21 lexical_error_case.txt
+-rw-r--r-- 1 M11212913 telnet 52048 2025-06-15 20:47 lex.yy.c
+-rw-r--r-- 1 M11212913 telnet   663 2025-06-15 20:46 microex.h
+-rw-r--r-- 1 M11212913 telnet  2386 2025-06-15 20:46 microex.l
+-rw-r--r-- 1 M11212913 telnet 16495 2025-06-15 20:45 microex.y
+-rw-r--r-- 1 M11212913 telnet     0 2025-06-15 20:47 result.txt
+-rw-r--r-- 1 M11212913 telnet   291 2025-06-15 15:43 teacher_test_case.txt
+-rw-r--r-- 1 M11212913 telnet   150 2025-06-15 16:36 undeclare_array_case.txt
+-rw-r--r-- 1 M11212913 telnet   135 2025-06-15 16:34 undeclare_var_case.txt
+-rw-r--r-- 1 M11212913 telnet   244 2025-06-15 19:34 while_loop_case.txt
+-rw-r--r-- 1 M11212913 telnet 68609 2025-06-15 20:47 y.tab.c
+-rw-r--r-- 1 M11212913 telnet  3262 2025-06-15 20:47 y.tab.h
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ ./a.out <[K[K[K [K[K[K[K[K[K[K./a.out < teacher_test_case.txt
+      START testP
+      Declare I, Integer
+      Declare A, Float
+      Declare B, Float
+      Declare C, Float
+      Declare D, Float
+      Declare LLL, Float_array, 100
+
+      I_STORE 1, I
+lb&1:
+      F_UMINUS LLL[I], T&1
+      F_MUL B, D, T&2
+      F_ADD T&1, T&2, T&3
+      F_SUB T&3, C,T&4
+      F_STORE T&4, A
+      INC I
+      I_CMP I, 100
+      JLE lb&1
+
+      F_CMP A, 10000.000000
+      JL lb&2
+      F_ADD A, 3.140000, T&5
+      CALL print, T&5
+      J lb&3
+lb&2:
+      CALL print, 2, 1.400000
+lb&3:
+      HALT testP
+
+      Declare T&1, Float
+      Declare T&2, Float
+      Declare T&3, Float
+      Declare T&4, Float
+      Declare T&5, Float
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ ./a.out < lexical_error_case.txt
+      START testP
+[Lexical error] line 4, column 9, unexpected character '@'
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ more[K[K[K[K./a.out < lexical_error_case.txt[1Pteacher_test_case.txtls -l[Kgcc lex.yy.c y.tab.c -ly -lfl[16Plex microex.lyacc -d microex.y./a.out < data_type_mismatch_case.txt [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pcat -n[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clear[Kat -n data_type_mismatch_case.txt [4Pvim data_type_mismatch_case.txtls[Kcd final_project/ls[Kwho./a.out < undeclare_array_case.txt [3Pcat -n[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@./a.out < undeclare_var[C[C[C[C[C[C[C[C[C[C[1Pcat -n undeclare_array[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Klexical_error_case.txt 
+     1	%%the beginning of an test data for Micro/Ex
+     2	Program testP
+     3	Begin
+     4	declare @@@@ as integer;
+     5	declare I as integer;
+     6	declare A,B,C,D, LLL[100] as float;
+     7	FOR (I:=1 TO 100)
+     8	A:=-LLL[I]+B*D-C;
+     9	ENDFOR
+    10	End
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ cat -n lexical_error_case.txt ./a.out < lexical_error_case.txt
+      START testP
+[Lexical error] line 4, column 9, unexpected character '@'
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ ./a.out < lexical_error_case.txt[2Pcat -n lexical_error_case.txt [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kundeclare_var_case.txt
+     1	%%the beginning of an test data for Micro/Ex
+     2	Program testP
+     3	Begin
+     4	declare I as integer;
+     5	declare A,B,C,D, LLL[100] as float;
+     6	X:=123;
+     7	End
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ ./a.out < undeclare_var_case.txt
+      START testP
+      Declare I, Integer
+      Declare A, Float
+      Declare B, Float
+      Declare C, Float
+      Declare D, Float
+      Declare LLL, Float_array, 100
+[Syntax error] line 6, undeclared variable 'X' on left hand side
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ ./a.out < undeclare_var_case.txt[3Pcat -n[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K./a.out < lexical_error_case.txt[2Pcat -n lexical_error_case.txt ./a.out < lexical_error_case.txtcat -n [K./a.out < undeclare_var_case.txtcat -n [K./a.out < lexical_error_case.txtcat -n [K./a.out < undeclare_array_case.txt[1P undeclare_array_case.txt[1Pundeclare_array_case.txt[1P undeclare_array_case.txt[1P undeclare_array_case.txt[1P undeclare_array_case.txt[1P undeclare_array_case.txt[1P undeclare_array_case.txt[1P undeclare_array_case.txt[1P undeclare_array_case.txt[1Pundeclare_array_case.txt
+     1	%%the beginning of an test data for Micro/Ex
+     2	Program testP
+     3	Begin
+     4	declare I as integer;
+     5	declare A,B,C,D, LLL[100] as float;
+     6	A:=-wqfafasf[I]+B*D-C;
+     7	End
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ cat -n undeclare_array_case.txt./a.out < undeclare_var_case.txt[1P_case.txt[1P_case.txt[1P_case.txta_case.txtr_case.txtr_case.txta_case.txty_case.txt
+      START testP
+      Declare I, Integer
+      Declare A, Float
+      Declare B, Float
+      Declare C, Float
+      Declare D, Float
+      Declare LLL, Float_array, 100
+[Syntax error] line 6, undeclared array variable 'wqfafasf' in expression
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ cat -n data_type_mismatch_case.txt
+     1	%%the beginning of an test data for Micro/Ex
+     2	Program testP
+     3	Begin
+     4	declare I as integer;
+     5	declare A,B,C,D, LLL[100] as float;
+     6	A:=-LLL[I]+B*D-C;
+     7	A:=A*B+C+I;
+     8	End
+     9	
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ ./a.out < data_type_mismatch_case.txt 
+      START testP
+      Declare I, Integer
+      Declare A, Float
+      Declare B, Float
+      Declare C, Float
+      Declare D, Float
+      Declare LLL, Float_array, 100
+      F_UMINUS LLL[I], T&1
+      F_MUL B, D, T&2
+      F_ADD T&1, T&2, T&3
+      F_SUB T&3, C,T&4
+      F_STORE T&4, A
+      F_MUL A, B, T&5
+      F_ADD T&5, C, T&6
+[Syntax error] line 7, data type mismatch in addition operation
+[Syntax error] line 7, assigning integer to float variable
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ ./a.out < data_type_mismatch_case.txt [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pcat -n data_type_mismatch_case.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kwhile_loop_case.txt
+     1	%%the beginning of an test data for Micro/Ex
+     2	Program testP
+     3	Begin
+     4	declare I as integer;
+     5	declare A,B,C,D, LLL[100] as float;
+     6	I:=1;
+     7	WHILE (I<=100)
+     8	A:=-LLL[I]+B*D-C;
+     9	I:=1+1;
+    10	ENDWHILE
+    11	IF (A>=10000.0) THEN
+    12	print(A+3.14);
+    13	ELSE
+    14	print(2,1.4);
+    15	ENDIF
+    16	End
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ cat -n while_loop_case.txt./a.out < data_type_mismatch_case.txt [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kwhile_loop_case.txt 
+      START testP
+      Declare I, Integer
+      Declare A, Float
+      Declare B, Float
+      Declare C, Float
+      Declare D, Float
+      Declare LLL, Float_array, 100
+      I_STORE 1, I
+
+lb&1:
+      I_CMP I, 100
+      JG lb&2
+      F_UMINUS LLL[I], T&1
+      F_MUL B, D, T&2
+      F_ADD T&1, T&2, T&3
+      F_SUB T&3, C,T&4
+      F_STORE T&4, A
+      I_ADD 1, 1, T&5
+      I_STORE T&5, I
+      J lb&1
+lb&2:
+
+      F_CMP A, 10000.000000
+      JL lb&3
+      F_ADD A, 3.140000, T&6
+      CALL print, T&6
+      J lb&4
+lb&3:
+      CALL print, 2, 1.400000
+lb&4:
+      HALT testP
+
+      Declare T&1, Float
+      Declare T&2, Float
+      Declare T&3, Float
+      Declare T&4, Float
+      Declare T&5, Integer
+      Declare T&6, Float
+]0;M11212913@telnet: ~/final_projectM11212913@telnet:~/final_project$ exit
+exit
+
+Script done on Sun 15 Jun 2025 08:50:41 PM CST
