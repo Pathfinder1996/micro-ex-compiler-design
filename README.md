@@ -40,6 +40,12 @@ yacc -d microex.y
 lex microex.l
 gcc lex.yy.c y.tab.c -ly -lfl
 ```
+These commands will generate the following files:
+- `y.tab.c`
+- `y.tab.h`
+- `lex.yy.c`
+- `a.exe` or `a.out`
+
 To run the compiler on different test cases:
 ```
 ./a < teacher_test_case.txt
