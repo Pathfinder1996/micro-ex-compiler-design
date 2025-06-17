@@ -3,7 +3,7 @@ A partial compiler for the Micro/EX language is implemented using Lex, Yacc, and
 
 This project includes full support for lexical analysis, syntax parsing, and basic code generation.
 
-However, only a subset of the language is supported — advanced features such as nested loops are not implemented.
+However, only basic features are supported — nested or complex constructs are not yet implemented.
 
 ### 🔗 1132 NTNU CSIE Compiler Design Final Project
 
