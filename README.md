@@ -1,4 +1,4 @@
-# 📝 Micro/EX Compiler Code Generation
+## 📝 Micro/EX Compiler Code Generation
 A partial compiler for the Micro/EX language is implemented using Lex, Yacc, and C.
 
 This project includes full support for lexical analysis, syntax parsing, and basic code generation.
@@ -14,11 +14,18 @@ However, only a subset of the language is supported — advanced features such a
   - Lex & Yacc, by John R. Levine, Tony Mason, and Doug Brown, O’Reilly & Associates
 
 📁 Contents
-- `microex.y` -
-- `microex.l` -
-- `microex.h` -
+- `microex.y` - acc grammar and semantic rules for parsing Micro/EX
+- `microex.l` - lexical analyzer for tokenizing Micro/EX source code
+- `microex.h` - contains symbol table definitions and expression attributes
 
 ## 📦 Output
+| Input | Output |
+|-------------|-----------------|
+| ![Input](image/input.png) | ![Enhanced](image/enhanced.png) |
+
+| Input | Output |
+|-------------|-----------------|
+| ![Input](image/input.png) | ![Enhanced](image/enhanced.png) |
 
 ## 🚀 Getting Started
 To compile the program:
