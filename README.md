@@ -27,11 +27,11 @@ However, only basic features are supported — nested or complex constructs are 
 ## 📦 Output
 | Input (teacher_test_case.txt) | Output |
 |-------------|-----------------|
-| ![Input](image/1.PNG) | ![Enhanced](image/2.PNG) |
+| ![Input1](image/1.PNG) | ![Output1](image/2.PNG) |
 
 | Input (while_loop_case.txt) | Output |
 |-------------|-----------------|
-| ![Input](image/3.PNG) | ![Enhanced](image/4.PNG) |
+| ![Input2](image/3.PNG) | ![Output2](image/4.PNG) |
 
 ## 🚀 Getting Started
 To compile the program:
