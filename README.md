@@ -13,7 +13,7 @@ However, only basic features are supported — nested or complex constructs are 
   - Crafting a Compiler with C, by Richard J. LeBlanc, Jr.
   - Lex & Yacc, by John R. Levine, Tony Mason, and Doug Brown, O’Reilly & Associates
 
-📁 Contents
+### 📁 Contents
 - `microex.y` - yacc grammar and semantic rules for parsing Micro/EX.
 - `microex.l` - lexical analyzer for tokenizing Micro/EX source code.
 - `microex.h` - contains symbol table definitions and expression attributes.
