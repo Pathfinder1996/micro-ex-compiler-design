@@ -7,7 +7,7 @@ However, only basic features are supported — nested or complex constructs are 
 
 ### 🔗 1132 NTNU CSIE Compiler Design Final Project
 
-- Course code: 3N6463701
+- Course code: 3N6463701 [Course link](https://web.ntnu.edu.tw/~ghhwang/course.html)
 - Instructor: Prof. Gwan-Hwan Hwang(黃冠寰 教授)
 - Textbook:
   - Crafting a Compiler with C, by Richard J. LeBlanc, Jr.
