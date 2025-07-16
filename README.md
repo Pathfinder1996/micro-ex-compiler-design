@@ -3,13 +3,13 @@
 
 此期末專題包含 lexical analysis、syntax parsing 與基礎的 code generation。
 
-這裡僅實作能編譯教授指定測資的編譯器，像是巢狀迴圈等複雜結構就沒有支援。
+這裡僅實作能編譯教授指定測資的編譯器，像是巢狀迴圈等複雜結構就無法。
 
 ### 🔗 1132 NTNU CSIE Compiler Design Final Project
 
-- Course code: CSC0004 [Course link](https://web.ntnu.edu.tw/~ghhwang/course.html)(三校聯盟課程代碼: 3N6463701)
-- Instructor: Prof. Gwan-Hwan Hwang(黃冠寰 教授)
-- Textbook:
+- 課程代碼: CSC0004 [課程教材連結](https://web.ntnu.edu.tw/~ghhwang/course.html)(三校聯盟課程代碼: 3N6463701)
+- 授課老師: Prof. Gwan-Hwan Hwang(黃冠寰 教授)
+- 課程用書:
   - Crafting a Compiler with C, by Richard J. LeBlanc, Jr.
   - Lex & Yacc, by John R. Levine, Tony Mason, and Doug Brown, O’Reilly & Associates
 
