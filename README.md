@@ -1,30 +1,30 @@
 ## 📝 Micro/EX Compiler Code Generation
-A partial compiler for the Micro/EX language is implemented using Lex, Yacc, and C.
+使用 Lex、Yacc 與 C 實作 Micro/EX 語言的編譯器(非完整支援)。
 
-This project includes full support for lexical analysis, syntax parsing, and basic code generation.
+此期末專題包含 lexical analysis、syntax parsing 與基礎的 code generation。
 
-However, only basic features are supported — nested or complex constructs are not yet implemented.
+這裡僅實作能編譯教授指定測資的編譯器，像是巢狀迴圈等複雜結構就沒有支援。
 
 ### 🔗 1132 NTNU CSIE Compiler Design Final Project
 
-- Course code: CSC0004 [Course link](https://web.ntnu.edu.tw/~ghhwang/course.html) (三校聯盟課程代碼: 3N6463701)
+- Course code: CSC0004 [Course link](https://web.ntnu.edu.tw/~ghhwang/course.html)(三校聯盟課程代碼: 3N6463701)
 - Instructor: Prof. Gwan-Hwan Hwang(黃冠寰 教授)
 - Textbook:
   - Crafting a Compiler with C, by Richard J. LeBlanc, Jr.
   - Lex & Yacc, by John R. Levine, Tony Mason, and Doug Brown, O’Reilly & Associates
 
-### 📁 Contents
-- `microex.y` - yacc grammar and semantic rules for parsing Micro/EX.
-- `microex.l` - lexical analyzer for tokenizing Micro/EX source code.
-- `microex.h` - contains symbol table definitions and expression attributes.
-- `teacher_test_case.txt` - test case provided by the instructor.
-- `lexical_error_case.txt` - triggers a lexical error by using invalid identifiers (e.g., @@@). (bonus)
-- `undeclare_var_case.txt` - produces an error when referencing an undeclared variable. (bonus)
-- `undeclare_array_case.txt` - produces an error when accessing an undeclared array. (bonus)
-- `data_type_mismatch_case.txt` - reports a type mismatch error when performing operations between integer and float. (bonus)
-- `while_loop_case.txt` - basic while loop support. (bonus)
+### 📁 壓縮檔內容
+- `microex.y` - yacc grammar 與 semantic rules for parsing Micro/EX。
+- `microex.l` - lexical analyzer(分析 Micro/EX 程式碼的 token)。
+- `microex.h` - 內為 symbol table 與表達式屬性的定義。
+- `teacher_test_case.txt` - 教授提供的測資。(90分項)
+- `lexical_error_case.txt` - 使用非法變數 (像是 @@@)，會報 lexical error 的測資。(加分項)
+- `undeclare_var_case.txt` - 使用未宣告的變數會報錯的測資。(加分項)
+- `undeclare_array_case.txt` - 使用未宣告的陣列會報錯的測資。(加分項)
+- `data_type_mismatch_case.txt` - 將 integer 與 float 進行 + - * / 運算會報錯的測資。(加分項)
+- `while_loop_case.txt` - 能支援基本的 while loop 測資(非巢狀)。(加分項)
 
-## 📦 Output
+## 📦 測試結果
 | Input (teacher_test_case.txt) | Output |
 |-------------|-----------------|
 | ![Input1](image/1.PNG) | ![Output1](image/2.PNG) |
@@ -33,20 +33,20 @@ However, only basic features are supported — nested or complex constructs are 
 |-------------|-----------------|
 | ![Input2](image/3.PNG) | ![Output2](image/4.PNG) |
 
-## 🚀 Getting Started
-To compile the program:
+## 🚀 如何開始
+使用以下指令編譯程式:
 ```
 yacc -d microex.y
 lex microex.l
 gcc lex.yy.c y.tab.c -ly -lfl
 ```
-These commands will generate the following files:
+編譯完應該會產生以下檔案:
 - `y.tab.c`
 - `y.tab.h`
 - `lex.yy.c`
 - `a.exe` or `a.out`
 
-To run the compiler on different test cases:
+輸入以下指令把測資丟進執行檔:
 ```
 ./a < teacher_test_case.txt
 ./a < lexical_error_case.txt
