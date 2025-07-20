@@ -18,7 +18,7 @@
 - `microex.l` - lexical analyzer(分析 Micro/EX 程式碼的 token)。
 - `microex.h` - 內為 symbol table 與表達式屬性的定義。
 - `teacher_test_case.txt` - 教授提供的測資。(90分項)
-- `lexical_error_case.txt` - 使用非法變數 (像是 @@@)，會報 lexical error 的測資。(加分項)
+- `lexical_error_case.txt` - 使用非法變數名稱 (像是 @@@)，會報 lexical error 的測資。(加分項)
 - `undeclare_var_case.txt` - 使用未宣告的變數會報錯的測資。(加分項)
 - `undeclare_array_case.txt` - 使用未宣告的陣列會報錯的測資。(加分項)
 - `data_type_mismatch_case.txt` - 將 integer 與 float 進行 + - * / 運算會報錯的測資。(加分項)
