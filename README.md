@@ -24,7 +24,7 @@
 - `data_type_mismatch_case.txt` - 將 integer 與 float 進行 + - * / 運算會報錯的測資。(加分項)
 - `while_loop_case.txt` - 能支援基本的 while loop 測資(非巢狀)。(加分項)
 
-## 📦 測試結果
+## 📦 測試結果 (點擊縮圖可放大)
 | Input (teacher_test_case.txt) | Output |
 |-------------|-----------------|
 | ![Input1](image/1.PNG) | ![Output1](image/2.PNG) |
