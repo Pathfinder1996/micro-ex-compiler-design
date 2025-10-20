@@ -12,6 +12,7 @@
 - 課程用書:
   - Crafting a Compiler with C, by Richard J. LeBlanc, Jr.
   - Lex & Yacc, by John R. Levine, Tony Mason, and Doug Brown, O’Reilly & Associates
+- 如果想要每週作業的題型，歡迎來信: daiyan.6666@gmail.com
 
 ### 📁 壓縮檔內容
 - `microex.y` - yacc grammar 與 semantic rules for parsing Micro/EX。
